@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <script src="https://kit.fontawesome.com/0d278e64bf.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="box" id="heading">
+        <h1>Wishlist <br> <%= date %></h1>
+    </div>
+
+    <div class="box">
+        <% for(let i = 0; i < myWishes.length; i++) { %>
+            <div class="item">
+                    <p><%= myWishes[i].date %> <%= myWishes[i].description %></p>
+                    
+                </div>
+            
+            
+        <% } %>    
+
+        
+    </div>
+    
+    <footer>
+        <span>M.A. Sikka &#169; 2021</span>
+    </footer>
+</body>
+</html>
