@@ -3,8 +3,6 @@ const mongoose = require('mongoose');
 
 const WishFromMongo = mongoose.model('Wish');
 
-
-
 exports.getMainPage = (req, res) => {
     
         let today = date.getTodayDateShort();
