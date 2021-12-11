@@ -4,6 +4,7 @@ require('./models/db');
 
 const mainPage = require('./routes/main');
 const adminPage = require('./routes/admin');
+const randomPage = require('./routes/random');
 const errorPage = require('./routes/error');
 
 
@@ -12,12 +13,14 @@ const app = express();
 
 app.set('view engine', ejs);
 app.use(express.static('public'));
+app.use(express.static('images'));
 app.use(express.urlencoded({extended: true}));
 
 
 
 app.use(mainPage);
 app.use(adminPage);
+app.use(randomPage);
 app.use(errorPage);
 
 

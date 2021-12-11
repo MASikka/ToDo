@@ -17,6 +17,8 @@
             <form action="/delete" method="POST">
                 <div class="item">
                     <p><%= myWishes[i].date %> <%= myWishes[i].description %></p>
+                    <img src="<%= myWishes[i].image %>" name="<%= myWishes[i].image %>" alt="">
+                    <input type="hidden" name="imgName" value="<%= myWishes[i].image %>">
                     <button type="submit" id="deleteButton" value="<%= myWishes[i].id %>" name="checkbox"><i class="fas fa-trash"></i></button>
                     
                 </div>
@@ -26,15 +28,14 @@
 
         
 
-        <form action="/admin" class="class" method="POST">
+        <form action="/admin" class="class" method="POST" enctype="multipart/form-data">
             <input type="text" autocomplete="off" name="newWish" placeholder="Add New Wish">
-            
+            <input type="file" name="userFile">
 
             <br>
             <button type="submit"><i class="fas fa-plus"></i></button>
         </form>
     </div>
-    
     <footer>
         <span>M.A. Sikka &#169; 2021</span>
     </footer>

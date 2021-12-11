@@ -96,3 +96,11 @@ html {
     color: rgba(0, 0, 0, 0.5);
     text-align: center;
   }
+  img{
+    width: 100px;
+    height: auto;
+  }
+  .randomimg{
+    width: 300px;
+    height: auto;
+  }
